@@ -1,15 +1,19 @@
+const form =document.querySelector('form');
 const uname =document.querySelector("#username");
 const winQuote =document.querySelector("#winQuote");
 const loseQuote =document.querySelector("#loseQuote");
 
 
+form.addEventListener('submit', function () {
+event.preventDefault();
 
-document.querySelector("form").addEventListener("submit", e => {
-  e.preventDefault();
+console.log("Your username is: " + event.target.elements[0].value + ". Your Win Quote is:  " + event.target.elements[1].value + ". Your lose quote is: " + event.target.elements[2].value + ".");
 
-  //Getter
-  console.log(document.querySelector("p").textContent);
+const formData = {}
+for (let i = 0; i <= 2; i++){
+  console.log(event.target.elements[i].value)
+}
+});
 
-  //Setter
-  document.querySelector("p").textConent = "${uname.value} your win quote is ${winQuote.value} and your lose quote is ${loseQuote.value}";
-})
+// {username: event.target.elements[0].value
+// password: event.target.elements[1].value}
