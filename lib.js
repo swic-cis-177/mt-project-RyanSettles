@@ -2,7 +2,21 @@ const tbody = document.querySelector("tbody");
 const template = document.querySelector("template");
 const button = document.querySelector("button");
 
-
+// when the button is clicked the data should be turned into an array and a new game table should be sumbitted
+button.addEventListener("submit"){
+  Array.from(event.target.elements)
+  .reduce(
+    (details, { score, value }) => ({
+      ...details,
+      [score]: value,
+    }),
+    {})
+    // Generate a random score
+    const generateScore = () =>
+Math.floor(Math.random() * (300-100 +1) +100);
+// create a new table once the button is clicked that adds the data from the text boxes into a new row on the table.
+  )
+}
 
 // this is what will be exported into scripts.js
 export default (data) => {
