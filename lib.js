@@ -19,9 +19,9 @@ Math.floor(Math.random() * (300-100 +1) +100);
 }
 
 // this is what will be exported into scripts.js
-export default (data) => {
+export default (user) => {
   // a function that should pull the username, winQuote, loseQuote and score one at a time from an object
-  data.forEach(({username, winQuote, loseQuote, score }) => {
+  user.forEach(({username, winQuote, loseQuote, score }) => {
     //grab the template and copy this note for each object
     const newTableRow = template.content.cloneNode(true);
     // grab all of the td tags in the tr tag and then assign variables to the td tags
