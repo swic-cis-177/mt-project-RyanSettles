@@ -1,16 +1,17 @@
-const form =document.querySelector('form');
-const p =document.querySelector("p");
+// import the command which allows the table to be created from lib.js
+import createTable from "./lib.js";
 
-form.addEventListener('submit', function () {
-event.preventDefault();
+const form = document.querySelector("form");
 
-console.log("Your username is: " + event.target.elements[0].value + ". Your Win Quote is:  " + event.target.elements[1].value + ". Your lose quote is: " + event.target.elements[2].value + ".");
+// create table from the data
+createTable(user);
 
-const formData = {}
-for (let i = 0; i <= 2; i++){
-  console.log(event.target.elements[i].value)
+render(user);
 
-  p.textContent =  ("Your username is: " + event.target.elements[0].value + ". Your Win Quote is:  " + event.target.elements[1].value + ". Your lose quote is: " + event.target.elements[2].value + ".");
-}
-});
+// wait for the submit button to be clicked then push the new information from the text boxes onto the table, and prevent the default information from being pushed
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
+  data.push(generateUser(event.target.elements));
+  render(user)
+})
