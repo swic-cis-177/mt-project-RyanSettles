@@ -1,0 +1,27 @@
+body {
+  font: Arial;
+  margin: 0 auto;
+}
+h1 {
+  text-color: Blue;
+}
+button {
+  background: #ADD8E6;
+}
+tbody {
+  --Gold: #FFD700;
+  --Silver: #C0C0C0;
+  --Bronze: #CD7F32;
+}
+[user-score="No Rank"]{
+  background-color: white;
+}
+[user-score="Gold"]{
+  background-color: var(--Gold);
+}
+[user-score="Silver"]{
+  background-color: var(--Silver);
+}
+[user-score="Bronze"]{
+  background-color: var(--Bronze);
+}
