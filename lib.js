@@ -2,6 +2,19 @@ const tbody = document.querySelector("tbody");
 const template = document.querySelector("template");
 const button = document.querySelector("button");
 
+const assignRank = (score) => {
+  if (score >= 400) {
+    return "Gold";
+  }
+  if (score >= 300) {
+    return "Silver";
+  }
+  if (score >= 200) {
+    return "Bronze";
+  }
+  return "No Rank";
+}
+
 // when the button is clicked the data should be turned into an array and a new game table should be sumbitted
 button.addEventListener("submit"){
   Array.from(event.target.elements)
