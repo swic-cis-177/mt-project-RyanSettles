@@ -12,6 +12,6 @@ render(user);
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  data.push(generateUser(event.target.elements));
+  user.push(generateUser(event.target.elements));
   render(user)
 })
