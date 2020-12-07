@@ -17,6 +17,12 @@ const assignRank = (score) => {
   return "No Rank";
 }
 
+// process the form from the text content of the text boxes and assign them to the variables.
+const processForm = (elements) => {
+  const newUser = { username: event.target.elements[0], winQuote: event.target.elements[1], loseQuote: event.target.elements[2], score: generateScore }
+}
+
+
 // when the button is clicked the data should be turned into an array and a new game table should be sumbitted
 button.addEventListener("submit"){
   Array.from(event.target.elements)
@@ -45,8 +51,8 @@ export default (user) => {
     //Setting the text content of the td tags to the variables in the array
     newGameTDs[0].textContent = username;
     newGameTDs[1].textContent = winQuote;
-    newGameTDs[0].textContent = loseQuote;
-    newGameTDs[0].textContent = score;
+    newGameTDs[2].textContent = loseQuote;
+    newGameTDs[3].textContent = score;
     // put this game row into the tbody tag
     tbody.appendChild(newTableRow);
   })
