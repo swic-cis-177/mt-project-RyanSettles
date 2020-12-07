@@ -17,6 +17,14 @@ const assignRank = (score) => {
   return "No Rank";
 }
 
+// color code the scores by using the variables from the stylesheet with the dataset and the variable assigners by selecting each and every score variable from the table and checking their values to assign the color to the table rows.
+const colorCodeScores = () => {
+  tbody.querySelectorAll("td:nth-child(4)").forEach((td) => {
+    const currentTd = td;
+    currentTd.parentElement.dataset.score = assignRank(Number(td.innerTxt));
+  });
+};
+
 // process the form from the text content of the text boxes and assign them to the variables.
 const processForm = (elements) => {
   const newUser = { username: event.target.elements[0], winQuote: event.target.elements[1], loseQuote: event.target.elements[2], score: generateScore }
