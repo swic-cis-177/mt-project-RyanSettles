@@ -2,6 +2,8 @@ const tbody = document.querySelector("tbody");
 const template = document.querySelector("template");
 const button = document.querySelector("button");
 
+
+// Depending on what random score you get, you will be given a rank based on how good the score is, which will color code your score on the table.
 const assignRank = (score) => {
   if (score >= 400) {
     return "Gold";
