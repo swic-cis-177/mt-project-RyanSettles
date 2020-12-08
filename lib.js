@@ -44,8 +44,9 @@ button.addEventListener("submit"){
     const generateScore = () =>
 Math.floor(Math.random() * (300-100 +1) +100);
 // create a new table once the button is clicked that adds the data from the text boxes into a new row on the table.
-  )
-}
+createGameTable(user);
+  );
+};
 
 // this is what will be exported into scripts.js
 export default (user) => {
@@ -63,4 +64,7 @@ export default (user) => {
     newGameTDs[3].textContent = score;
     // put this game row into the tbody tag
     tbody.appendChild(newTableRow);
+    // Assign the ranks to the table rows
+    const assignRanks: () => void
+    assignRanks();
   })
