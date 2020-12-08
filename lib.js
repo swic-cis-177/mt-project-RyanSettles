@@ -30,6 +30,7 @@ const processForm = (elements) => {
   const newUser = { username: event.target.elements[0], winQuote: event.target.elements[1], loseQuote: event.target.elements[2], score: generateScore }
 }
 
+// The text boxes will be put into one variable from teh reduce command and then they will be exported into scripts.
 export const generateUser = (elements) => {
 // when the button is clicked the data should be turned into an array and a new game table should be sumbitted
 button.addEventListener("submit"){
