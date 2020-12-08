@@ -30,7 +30,7 @@ const processForm = (elements) => {
   const newUser = { username: event.target.elements[0], winQuote: event.target.elements[1], loseQuote: event.target.elements[2], score: generateScore }
 }
 
-
+export const generateUser = (elements) => {
 // when the button is clicked the data should be turned into an array and a new game table should be sumbitted
 button.addEventListener("submit"){
   Array.from(event.target.elements)
@@ -46,6 +46,7 @@ Math.floor(Math.random() * (300-100 +1) +100);
 // create a new table once the button is clicked that adds the data from the text boxes into a new row on the table.
 createGameTable(user);
   );
+};
 };
 
 // this is what will be exported into scripts.js
