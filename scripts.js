@@ -4,6 +4,8 @@ import createTable from "./lib.js";
 // import the user that was brought from the text boxes into scripts.
 import user from "./lib.js";
 
+createTable(user);
+
 const form = document.querySelector("form");
 
 
