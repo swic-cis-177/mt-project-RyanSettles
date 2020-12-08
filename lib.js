@@ -3,7 +3,7 @@ const template = document.querySelector("template");
 const button = document.querySelector("button");
 
 
-// Depending on what random score you get, you will be given a rank based on how good the score is, which will color code your score on the table.
+// Depending on what random score you get, you will be given a rank based on how good the score is, which will color code your score on the table. If no thresholds are met then No Rank will be assigned and that row will have a white background color.
 const assignRank = (score) => {
   if (score >= 400) {
     return "Gold";
