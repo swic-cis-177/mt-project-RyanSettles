@@ -1,6 +1,9 @@
 // import the command which allows the table to be created from lib.js
 import createTable from "./lib.js";
 
+// import the user that was brought from the text boxes into scripts.
+import user from "./lib.js";
+
 const form = document.querySelector("form");
 
 
