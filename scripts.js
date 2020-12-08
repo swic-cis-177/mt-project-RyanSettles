@@ -3,8 +3,6 @@ import createTable from "./lib.js";
 
 const form = document.querySelector("form");
 
-// create table from the data
-createTable(user);
 
 render(user);
 
